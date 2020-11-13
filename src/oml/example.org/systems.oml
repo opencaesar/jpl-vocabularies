@@ -1,0 +1,27 @@
+description <http://example.org/systems> with # as systems {
+  uses <http://example.org/library>
+  uses <http://imce.jpl.nasa.gov/foundation/base>
+
+  // Spacecraft 1
+
+  ci sc1 : library:Spacecraft [
+    base:contains t1a
+    base:contains t1b
+  ]
+  
+  ci sc1.t1a : library:Thruster
+  ci sc1.t1b : library:Thruster
+
+  // Quantities 
+
+  ci sc1.t1a.i : 80000-4-quantities:impulse [
+    metrology:isQuantityOf sc1.t1a
+  ]
+
+  ci sc1.t1b.i : 80000-4-quantities:impulse [
+    metrology:isQuantityOf sc1.t1b
+  ]
+
+  // Demo: Collaborator to add Spacecraft 2
+  
+}

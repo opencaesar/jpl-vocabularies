@@ -1,0 +1,14 @@
+vocabulary <http://example.org/library> with # as library {
+  extends <http://iupac.org/metrology>
+  extends <http://iso.org/80000-4-quantityValues>
+  extends <http://iso.org/80000-6-quantityValues>
+
+  aspect PhysicalThing :> metrology:Object
+
+  concept Spacecraft :> PhysicalThing
+
+  concept AvionicsDevice :> PhysicalThing
+
+  concept Thruster :> AvionicsDevice
+
+}
