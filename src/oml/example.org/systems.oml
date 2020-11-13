@@ -5,8 +5,8 @@ description <http://example.org/systems> with # as systems {
   // Spacecraft 1
 
   ci sc1 : library:Spacecraft [
-    base:contains t1a
-    base:contains t1b
+    base:contains sc1.t1a
+    base:contains sc1.t1b
   ]
   
   ci sc1.t1a : library:Thruster
